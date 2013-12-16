@@ -1,0 +1,18 @@
+diff -rupN numpy-1.8.0.orig/numpy/distutils/intelccompiler.py numpy-1.8.0/numpy/distutils/intelccompiler.py
+--- numpy-1.8.0.orig/numpy/distutils/intelccompiler.py	2013-12-11 20:36:32.138339660 +0000
++++ numpy-1.8.0/numpy/distutils/intelccompiler.py	2013-12-11 20:39:10.375440978 +0000
+@@ -17,7 +17,7 @@ class IntelCCompiler(UnixCCompiler):
+                              compiler_so=compiler,
+                              compiler_cxx=compiler,
+                              linker_exe=compiler,
+-                             linker_so=compiler + ' -shared')
++                             linker_so=compiler + ' -shared -lstdc++')
+ 
+ class IntelItaniumCCompiler(IntelCCompiler):
+     compiler_type = 'intele'
+@@ -42,4 +42,4 @@ class IntelEM64TCCompiler(UnixCCompiler)
+                              compiler_so=compiler,
+                              compiler_cxx=compiler,
+                              linker_exe=compiler,
+-                             linker_so=compiler + ' -shared')
++                             linker_so=compiler + ' -shared -lstdc++')
