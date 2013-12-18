@@ -1,0 +1,32 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# Copyright:: Copyright 2013 TravelShark
+# Authors::   Pau Haro Negre <pauharo@gmail.com>
+# License::   MIT/GPL
+# $Id$
+##
+
+easyblock = "Toolchain"
+
+name = 'TravelShark_Python'
+version = '20131218'
+
+homepage = 'http://www.travelshark.com'
+description = """TravelShark Python environment with all the main packages and dependencies."""
+
+toolchain = {'name': 'goolf', 'version': '1.6.10'}  # ie. build against the GNU compilers & OpenMPI stack
+
+dependencies = [
+    ('Python', '2.7.6'),
+    ('numpy', '1.8.0'),
+    ('scipy', '0.12.0'),
+    ('Cython', '0.19.2'),
+    ('IPython', '1.1.0'),
+    ('matplotlib', '1.3.1'),
+    ('mpi4py', '1.3.1'),
+    ('numexpr', '2.2.2'),
+    ('pyTables', '3.0.0'),
+]
+
+moduleclass = 'toolchain'
