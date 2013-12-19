@@ -18,6 +18,8 @@ toolchain = {'name': 'goolf', 'version': '1.6.10'}
 source_urls = [('http://sourceforge.net/projects/pytables/files/pytables/%s' % version, 'download')]
 sources = ['tables-%s.tar.gz' % version]
 
+patches = ['tables-3.0.0_setup.py-libs.patch']
+
 python = 'Python'
 pythonver = '2.7.6'
 pythonshortver = '.'.join(pythonver.split('.')[0:2])
