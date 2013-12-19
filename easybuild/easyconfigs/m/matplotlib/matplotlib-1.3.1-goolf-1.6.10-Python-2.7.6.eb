@@ -24,6 +24,7 @@ dependencies = [
     ('zlib', '1.2.8'),
     ('freetype', '2.5.2'),
     ('libpng', '1.6.7'),
+    ('numpy', '1.8.0', versionsuffix),
 ]
 
 sanity_check_paths = {
