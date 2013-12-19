@@ -23,7 +23,8 @@ versionsuffix = '-%s-%s' % (python, pythonver)
 
 dependencies = [
                 (python, pythonver),
-                ('HDF5', '1.8.12')
+                ('numpy', '1.8.0', versionsuffix),
+                ('HDF5', '1.8.12'),
                ]
 
 eggname = '%s-%s-py%s-linux-x86_64.egg' % (name, version, pythonshortver)
