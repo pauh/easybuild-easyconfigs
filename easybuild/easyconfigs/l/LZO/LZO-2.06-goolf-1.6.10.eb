@@ -17,6 +17,7 @@ sources = [SOURCELOWER_TAR_GZ]
 source_urls = [homepage + 'download/']
 
 toolchain = {'name': 'goolf', 'version': '1.6.10'}
+toolchainopts = {'pic': True}
 
 sanity_check_paths = {
                       'files': [],
