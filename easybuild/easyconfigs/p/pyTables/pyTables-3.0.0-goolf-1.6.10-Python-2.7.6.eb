@@ -13,7 +13,7 @@ description = """PyTables is a package for managing hierarchical datasets and de
  relational or object oriented databases."""
 
 toolchain = {'name': 'goolf', 'version': '1.6.10'}
-toolchainopts = {'usempi': True}
+#toolchainopts = {'usempi': True}
 
 source_urls = [('http://sourceforge.net/projects/pytables/files/pytables/%s' % version, 'download')]
 sources = ['tables-%s.tar.gz' % version]
