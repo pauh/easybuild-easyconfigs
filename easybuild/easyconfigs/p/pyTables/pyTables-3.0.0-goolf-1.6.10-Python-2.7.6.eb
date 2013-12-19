@@ -29,8 +29,10 @@ dependencies = [
                 (python, pythonver),
                 ('numpy', '1.8.0', versionsuffix),
                 ('numexpr', '2.2.2', versionsuffix),
-                ('HDF5', '1.8.12'),
                 ('Cython', '0.19.2', versionsuffix),
+                ('HDF5', '1.8.12'),
+                ('bzip2', '1.0.6'),
+                ('LZO', '2.06'),
                ]
 
 sanity_check_paths = {
