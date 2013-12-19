@@ -28,8 +28,8 @@ dependencies = [
 ]
 
 sanity_check_paths = {
-    'files': [],
-    'dirs': ['lib/python%s/site-packages/matplotlib' % pythonshortversion],
+    'files': ['bin/nosetests', 'bin/nosetests-%s' % pythonshortversion],
+    'dirs': [],
 }
 
 moduleclass = 'vis'
