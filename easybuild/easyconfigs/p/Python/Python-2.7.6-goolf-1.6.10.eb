@@ -16,7 +16,6 @@ dependencies = [
     ('zlib', '1.2.8'),
     ('libreadline', '6.2'),
     ('ncurses', '5.9'),
-    ('binutils', '2.22'),
     ('OpenSSL', '1.0.0'),
 ]
 
