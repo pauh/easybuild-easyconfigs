@@ -20,8 +20,6 @@ dependencies = [
     ('OpenSSL', '1.0.0'),
 ]
 
-dateutil_version = '2.2'
-
 # order is important!
 exts_list = [
     # Python package install tools
@@ -38,9 +36,9 @@ exts_list = [
     }),
 
     # matplotlib dependencies
-    ('dateutil', dateutil_version, {
+    ('dateutil', '2.2', {
         'source_urls': ['http://pypi.python.org/packages/source/p/python-dateutil/'],
-        'sources': ['python-dateutil-%s.tar.gz' % dateutil_version],
+        'source_tmpl': 'python-%(name)s-%(version)s.tar.gz',
     }),
     ('six', '1.4.1', {
         'source_urls': ['http://pypi.python.org/packages/source/s/six/'],
