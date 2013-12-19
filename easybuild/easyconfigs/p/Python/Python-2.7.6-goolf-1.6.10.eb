@@ -36,7 +36,7 @@ exts_list = [
     }),
 
     # matplotlib dependencies
-    ('python-dateutil', '2.2', {
+    ('dateutil', '2.2', {
         'source_urls': ['http://pypi.python.org/packages/source/p/python-dateutil/'],
     }),
     ('six', '1.4.1', {
