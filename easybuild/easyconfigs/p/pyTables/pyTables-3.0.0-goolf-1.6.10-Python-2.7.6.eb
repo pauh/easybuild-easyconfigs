@@ -34,7 +34,7 @@ dependencies = [
                ]
 
 sanity_check_paths = {
-                      'files': ['bin/%s' % x for x in ['nctoh5', 'ptdump', 'ptrepack']],
+                      'files': ['bin/%s' % x for x in ['ptdump', 'ptrepack']],
                       'dirs': ['lib/python%s/site-packages/tables' % pythonshortver]
                      }
 
