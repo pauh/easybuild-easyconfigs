@@ -1,0 +1,27 @@
+diff -rupN tables-3.0.0.orig/setup.py tables-3.0.0/setup.py
+--- tables-3.0.0.orig/setup.py	2013-12-19 16:51:43.826440016 +0000
++++ tables-3.0.0/setup.py	2013-12-19 18:17:53.636714064 +0000
+@@ -150,10 +150,12 @@ def add_from_path(envname, dirs):
+         pass
+ 
+ 
+-def add_from_flags(envname, flag_key, dirs):
++def add_from_flags(envname, flag_key, dirs, add_without_flag_key=False):
+     for flag in os.environ.get(envname, "").split():
+         if flag.startswith(flag_key):
+             dirs.append(flag[len(flag_key):])
++        elif add_without_flag_key:
++            dirs.append(flag)
+ 
+ if os.name == 'posix':
+     default_header_dirs = []
+@@ -385,7 +387,8 @@ LFLAGS = os.environ.get('LFLAGS', '').sp
+ # the default as it will suppress *all* the warnings, which definitely
+ # is not a good idea.
+ CFLAGS = os.environ.get('CFLAGS', '').split()
+-LIBS = os.environ.get('LIBS', '').split()
++LIBS = []
++add_from_flags('LIBS', '-l', LIBS, add_without_flag_key=True)
+ 
+ # ...then the command line.
+ # Handle --hdf5=[PATH] --lzo=[PATH] --bzip2=[PATH]
